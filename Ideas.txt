@@ -1,1 +1,18 @@
 -Cambiar de color al concretar una operación
+- la respuesta es una frase relacionada al numero
+-implementar matrices para calculo de multiples numeros
+
+
+4 - decadas que tenia la senora a la que Arjona canta
+
+Azul
+fondo E3ECF3
+boton fondo A8D0E6
+boton signo 24305E
+
+
+Validaciones:
+
+25+36+
+No letras
+clickear "=" cuando ya está el resultado
