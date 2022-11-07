@@ -20,7 +20,7 @@ public class frameCld extends javax.swing.JFrame {
         initComponents();
         this.setResizable(false);
         this.setLocationRelativeTo(null);
-        this.setSize(395, 515);
+        this.setSize(395, 485);
         this.setTitle("Calcololatrice");
         ImageIcon img = new ImageIcon("images/icono.png");
         setIconImage(img.getImage());
@@ -103,7 +103,7 @@ public class frameCld extends javax.swing.JFrame {
                 deleteOneActionPerformed(evt);
             }
         });
-        bg.add(deleteOne, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 360, 60, 60));
+        bg.add(deleteOne, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 360, 60, 60));
 
         minus.setBackground(new java.awt.Color(129, 178, 154));
         minus.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 28)); // NOI18N
@@ -259,7 +259,7 @@ public class frameCld extends javax.swing.JFrame {
                 equalActionPerformed(evt);
             }
         });
-        bg.add(equal, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 360, 60, 60));
+        bg.add(equal, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 360, 60, 60));
 
         show.setBackground(new java.awt.Color(255, 215, 186));
         show.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 24)); // NOI18N
@@ -282,12 +282,12 @@ public class frameCld extends javax.swing.JFrame {
                 toGActionPerformed(evt);
             }
         });
-        bg.add(toG, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 60, 30));
+        bg.add(toG, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 50, 30));
 
         jLabel1.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(224, 122, 95));
         jLabel1.setText("Citrice");
-        bg.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 430, 60, -1));
+        bg.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, 60, -1));
 
         toR.setBackground(new java.awt.Color(235, 167, 184));
         toR.setFont(new java.awt.Font("Yu Gothic Light", 1, 10)); // NOI18N
@@ -298,7 +298,7 @@ public class frameCld extends javax.swing.JFrame {
                 toRActionPerformed(evt);
             }
         });
-        bg.add(toR, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 30, 60, 30));
+        bg.add(toR, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, 50, 30));
 
         toY.setBackground(new java.awt.Color(227, 214, 122));
         toY.setFont(new java.awt.Font("Yu Gothic Light", 1, 10)); // NOI18N
@@ -309,7 +309,7 @@ public class frameCld extends javax.swing.JFrame {
                 toYActionPerformed(evt);
             }
         });
-        bg.add(toY, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, 60, 30));
+        bg.add(toY, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, 50, 30));
 
         toB.setBackground(new java.awt.Color(168, 208, 230));
         toB.setFont(new java.awt.Font("Yu Gothic Light", 1, 10)); // NOI18N
@@ -320,7 +320,7 @@ public class frameCld extends javax.swing.JFrame {
                 toBActionPerformed(evt);
             }
         });
-        bg.add(toB, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 60, 30));
+        bg.add(toB, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 50, 30));
 
         times.setBackground(new java.awt.Color(129, 178, 154));
         times.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 28)); // NOI18N
@@ -374,7 +374,7 @@ public class frameCld extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(bg, javax.swing.GroupLayout.DEFAULT_SIZE, 480, Short.MAX_VALUE)
+            .addComponent(bg, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -481,6 +481,7 @@ public class frameCld extends javax.swing.JFrame {
     private void toGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toGActionPerformed
         green g = new green();
         g.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_toGActionPerformed
 
     private void toRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toRActionPerformed
@@ -505,11 +506,11 @@ public class frameCld extends javax.swing.JFrame {
     }//GEN-LAST:event_potencyActionPerformed
 
     private void squareActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_squareActionPerformed
-        show.setText(show.getText() + "√");
+        
     }//GEN-LAST:event_squareActionPerformed
 
     private void factorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_factorialActionPerformed
-        show.setText(show.getText() + "!");
+        
     }//GEN-LAST:event_factorialActionPerformed
 
     /**
