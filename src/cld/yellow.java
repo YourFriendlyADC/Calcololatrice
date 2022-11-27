@@ -4,27 +4,17 @@
  */
 package cld;
 
-import javax.swing.ImageIcon;
-
 /**
  *
  * @author Victor1
  */
-public class blue extends javax.swing.JFrame {
+public class yellow extends javax.swing.JFrame {
 
-    String mostrar = "";
-    String sign;
     /**
-     * Creates new form blue
+     * Creates new form yellow
      */
-    public blue() {
+    public yellow() {
         initComponents();
-        this.setResizable(false);
-        this.setLocationRelativeTo(null);
-        this.setSize(645, 510);
-        this.setTitle("Calcololatrice");
-        ImageIcon img = new ImageIcon("images/icono.png");
-        setIconImage(img.getImage());
     }
 
     /**
@@ -36,22 +26,17 @@ public class blue extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jPanel1.setBackground(new java.awt.Color(227, 236, 243));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGap(0, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGap(0, 300, Short.MAX_VALUE)
         );
 
         pack();
@@ -74,52 +59,24 @@ public class blue extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(blue.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(yellow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(blue.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(yellow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(blue.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(yellow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(blue.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(yellow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new blue().setVisible(true);
+                new yellow().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
-
-    public void calc(int nOne, int nTwo, String sign) {
-        int result = 0;
-        switch (sign) {
-            case "+":
-                result = nOne + nTwo;
-                break;
-            case "-":
-                result = nOne - nTwo;
-                break;
-            case "/":
-                result = nOne / nTwo;
-                break;
-            case "*":
-                result = nOne * nTwo;
-                break;
-        }
-//        result = phrase(result);
-//    show.setText("=" + Integer.toString(result));
-    }
-    
-//    public String phrase(int result) {
-//        swith (result) {
-//        case 1:
-//        case 2:
-//        }
-//    }
 }
