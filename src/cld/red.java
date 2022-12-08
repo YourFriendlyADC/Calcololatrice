@@ -10,18 +10,19 @@ import javax.swing.ImageIcon;
  *
  * @author Victor1
  */
-public class green extends javax.swing.JFrame {
+public class red extends javax.swing.JFrame {
 
     String mostrar = "";
     String sign;
+
     /**
-     * Creates new form green
+     * Creates new form red
      */
-    public green() {
+    public red() {
         initComponents();
         this.setResizable(false);
         this.setLocationRelativeTo(null);
-        this.setSize(535, 385);
+        this.setSize(395, 480);
         this.setTitle("Calcololatrice");
         ImageIcon img = new ImageIcon("images/icono.png");
         setIconImage(img.getImage());
@@ -37,6 +38,7 @@ public class green extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        show = new javax.swing.JTextField();
         plus = new javax.swing.JButton();
         divide = new javax.swing.JButton();
         deleteOne = new javax.swing.JButton();
@@ -57,42 +59,53 @@ public class green extends javax.swing.JFrame {
         potency = new javax.swing.JButton();
         square = new javax.swing.JButton();
         factorial = new javax.swing.JButton();
-        show = new javax.swing.JTextField();
+        toO = new javax.swing.JButton();
         toG = new javax.swing.JButton();
         toR = new javax.swing.JButton();
         toY = new javax.swing.JButton();
         toB = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        toO = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(208, 255, 215));
+        jPanel1.setBackground(new java.awt.Color(255, 153, 153));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        plus.setBackground(new java.awt.Color(129, 178, 154));
+        show.setBackground(new java.awt.Color(255, 204, 204));
+        show.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 24)); // NOI18N
+        show.setForeground(new java.awt.Color(153, 0, 0));
+        show.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 0, 51), 3, true));
+        show.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        show.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                showActionPerformed(evt);
+            }
+        });
+        jPanel1.add(show, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 340, 60));
+
+        plus.setBackground(new java.awt.Color(255, 204, 204));
         plus.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 28)); // NOI18N
-        plus.setForeground(new java.awt.Color(61, 64, 91));
+        plus.setForeground(new java.awt.Color(153, 0, 51));
         plus.setText("+");
-        plus.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(61, 64, 91), 3, true));
+        plus.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 0, 0), 3, true));
         plus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 plusActionPerformed(evt);
             }
         });
-        jPanel1.add(plus, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, 60, 60));
+        jPanel1.add(plus, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 60, 60));
 
-        divide.setBackground(new java.awt.Color(129, 178, 154));
+        divide.setBackground(new java.awt.Color(255, 204, 204));
         divide.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 28)); // NOI18N
-        divide.setForeground(new java.awt.Color(61, 64, 91));
+        divide.setForeground(new java.awt.Color(153, 0, 51));
         divide.setText("/");
-        divide.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(61, 64, 91), 3, true));
+        divide.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 0, 0), 3, true));
         divide.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 divideActionPerformed(evt);
             }
         });
-        jPanel1.add(divide, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 200, 60, 60));
+        jPanel1.add(divide, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 270, 60, 60));
 
         deleteOne.setBackground(new java.awt.Color(190, 149, 196));
         deleteOne.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 28)); // NOI18N
@@ -104,25 +117,25 @@ public class green extends javax.swing.JFrame {
                 deleteOneActionPerformed(evt);
             }
         });
-        jPanel1.add(deleteOne, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 270, 60, 60));
+        jPanel1.add(deleteOne, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 340, 60, 60));
 
-        minus.setBackground(new java.awt.Color(129, 178, 154));
+        minus.setBackground(new java.awt.Color(255, 204, 204));
         minus.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 28)); // NOI18N
-        minus.setForeground(new java.awt.Color(61, 64, 91));
+        minus.setForeground(new java.awt.Color(153, 0, 51));
         minus.setText("-");
-        minus.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(61, 64, 91), 3, true));
+        minus.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 0, 0), 3, true));
         minus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 minusActionPerformed(evt);
             }
         });
-        jPanel1.add(minus, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 200, 60, 60));
+        jPanel1.add(minus, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 270, 60, 60));
 
-        n3.setBackground(new java.awt.Color(246, 252, 246));
+        n3.setBackground(new java.awt.Color(255, 255, 255));
         n3.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 28)); // NOI18N
-        n3.setForeground(new java.awt.Color(51, 78, 50));
+        n3.setForeground(new java.awt.Color(102, 102, 102));
         n3.setText("3");
-        n3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 78, 50), 3, true));
+        n3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 102, 102), 3, true));
         n3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 n3ActionPerformed(evt);
@@ -130,11 +143,11 @@ public class green extends javax.swing.JFrame {
         });
         jPanel1.add(n3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, 60, 60));
 
-        n1.setBackground(new java.awt.Color(246, 252, 246));
+        n1.setBackground(new java.awt.Color(255, 255, 255));
         n1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 28)); // NOI18N
-        n1.setForeground(new java.awt.Color(51, 78, 50));
+        n1.setForeground(new java.awt.Color(102, 102, 102));
         n1.setText("1");
-        n1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 78, 50), 3, true));
+        n1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 102, 102), 3, true));
         n1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 n1ActionPerformed(evt);
@@ -142,11 +155,11 @@ public class green extends javax.swing.JFrame {
         });
         jPanel1.add(n1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 60, 60));
 
-        n2.setBackground(new java.awt.Color(246, 252, 246));
+        n2.setBackground(new java.awt.Color(255, 255, 255));
         n2.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 28)); // NOI18N
-        n2.setForeground(new java.awt.Color(51, 78, 50));
+        n2.setForeground(new java.awt.Color(102, 102, 102));
         n2.setText("2");
-        n2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 78, 50), 3, true));
+        n2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 102, 102), 3, true));
         n2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 n2ActionPerformed(evt);
@@ -154,77 +167,77 @@ public class green extends javax.swing.JFrame {
         });
         jPanel1.add(n2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, 60, 60));
 
-        n6.setBackground(new java.awt.Color(246, 252, 246));
+        n6.setBackground(new java.awt.Color(255, 255, 255));
         n6.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 28)); // NOI18N
-        n6.setForeground(new java.awt.Color(51, 78, 50));
+        n6.setForeground(new java.awt.Color(102, 102, 102));
         n6.setText("6");
-        n6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 78, 50), 3, true));
+        n6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 102, 102), 3, true));
         n6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 n6ActionPerformed(evt);
             }
         });
-        jPanel1.add(n6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 200, 60, 60));
+        jPanel1.add(n6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 60, 60));
 
-        n4.setBackground(new java.awt.Color(246, 252, 246));
+        n4.setBackground(new java.awt.Color(255, 255, 255));
         n4.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 28)); // NOI18N
-        n4.setForeground(new java.awt.Color(51, 78, 50));
+        n4.setForeground(new java.awt.Color(102, 102, 102));
         n4.setText("4");
-        n4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 78, 50), 3, true));
+        n4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 102, 102), 3, true));
         n4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 n4ActionPerformed(evt);
             }
         });
-        jPanel1.add(n4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 60, 60));
+        jPanel1.add(n4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 130, 60, 60));
 
-        n5.setBackground(new java.awt.Color(246, 252, 246));
+        n5.setBackground(new java.awt.Color(255, 255, 255));
         n5.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 28)); // NOI18N
-        n5.setForeground(new java.awt.Color(51, 78, 50));
+        n5.setForeground(new java.awt.Color(102, 102, 102));
         n5.setText("5");
-        n5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 78, 50), 3, true));
+        n5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 102, 102), 3, true));
         n5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 n5ActionPerformed(evt);
             }
         });
-        jPanel1.add(n5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, 60, 60));
+        jPanel1.add(n5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, 60, 60));
 
-        n10.setBackground(new java.awt.Color(246, 252, 246));
+        n10.setBackground(new java.awt.Color(255, 255, 255));
         n10.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 28)); // NOI18N
-        n10.setForeground(new java.awt.Color(51, 78, 50));
+        n10.setForeground(new java.awt.Color(102, 102, 102));
         n10.setText("9");
-        n10.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 78, 50), 3, true));
+        n10.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 102, 102), 3, true));
         n10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 n10ActionPerformed(evt);
             }
         });
-        jPanel1.add(n10, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 270, 60, 60));
+        jPanel1.add(n10, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 200, 60, 60));
 
-        n7.setBackground(new java.awt.Color(246, 252, 246));
+        n7.setBackground(new java.awt.Color(255, 255, 255));
         n7.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 28)); // NOI18N
-        n7.setForeground(new java.awt.Color(51, 78, 50));
+        n7.setForeground(new java.awt.Color(102, 102, 102));
         n7.setText("7");
-        n7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 78, 50), 3, true));
+        n7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 102, 102), 3, true));
         n7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 n7ActionPerformed(evt);
             }
         });
-        jPanel1.add(n7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 60, 60));
+        jPanel1.add(n7, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, 60, 60));
 
-        n8.setBackground(new java.awt.Color(246, 252, 246));
+        n8.setBackground(new java.awt.Color(255, 255, 255));
         n8.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 28)); // NOI18N
-        n8.setForeground(new java.awt.Color(51, 78, 50));
+        n8.setForeground(new java.awt.Color(102, 102, 102));
         n8.setText("8");
-        n8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 78, 50), 3, true));
+        n8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 102, 102), 3, true));
         n8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 n8ActionPerformed(evt);
             }
         });
-        jPanel1.add(n8, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 270, 60, 60));
+        jPanel1.add(n8, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 200, 60, 60));
 
         delete.setBackground(new java.awt.Color(190, 149, 196));
         delete.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
@@ -236,19 +249,19 @@ public class green extends javax.swing.JFrame {
                 deleteActionPerformed(evt);
             }
         });
-        jPanel1.add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 130, 60, 60));
+        jPanel1.add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 340, 60, 60));
 
-        n0.setBackground(new java.awt.Color(246, 252, 246));
+        n0.setBackground(new java.awt.Color(255, 255, 255));
         n0.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 28)); // NOI18N
-        n0.setForeground(new java.awt.Color(51, 78, 50));
+        n0.setForeground(new java.awt.Color(102, 102, 102));
         n0.setText("0");
-        n0.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 78, 50), 3, true));
+        n0.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 102, 102), 3, true));
         n0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 n0ActionPerformed(evt);
             }
         });
-        jPanel1.add(n0, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 200, 60, 60));
+        jPanel1.add(n0, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 200, 60, 60));
 
         equal.setBackground(new java.awt.Color(190, 149, 196));
         equal.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 28)); // NOI18N
@@ -260,67 +273,66 @@ public class green extends javax.swing.JFrame {
                 equalActionPerformed(evt);
             }
         });
-        jPanel1.add(equal, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 270, 60, 60));
+        jPanel1.add(equal, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 340, 60, 60));
 
-        times.setBackground(new java.awt.Color(129, 178, 154));
+        times.setBackground(new java.awt.Color(255, 204, 204));
         times.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 28)); // NOI18N
-        times.setForeground(new java.awt.Color(61, 64, 91));
+        times.setForeground(new java.awt.Color(153, 0, 51));
         times.setText("*");
-        times.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(61, 64, 91), 3, true));
+        times.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 0, 0), 3, true));
         times.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 timesActionPerformed(evt);
             }
         });
-        jPanel1.add(times, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 130, 60, 60));
+        jPanel1.add(times, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 270, 60, 60));
 
-        potency.setBackground(new java.awt.Color(129, 178, 154));
+        potency.setBackground(new java.awt.Color(255, 204, 204));
         potency.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 28)); // NOI18N
-        potency.setForeground(new java.awt.Color(61, 64, 91));
+        potency.setForeground(new java.awt.Color(153, 0, 51));
         potency.setText("^");
-        potency.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(61, 64, 91), 3, true));
+        potency.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 0, 0), 3, true));
         potency.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 potencyActionPerformed(evt);
             }
         });
-        jPanel1.add(potency, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 130, 60, 60));
+        jPanel1.add(potency, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 270, 60, 60));
 
-        square.setBackground(new java.awt.Color(129, 178, 154));
+        square.setBackground(new java.awt.Color(255, 204, 204));
         square.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 28)); // NOI18N
-        square.setForeground(new java.awt.Color(61, 64, 91));
+        square.setForeground(new java.awt.Color(153, 0, 51));
         square.setText("√");
-        square.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(61, 64, 91), 3, true));
+        square.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 0, 51), 3, true));
         square.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 squareActionPerformed(evt);
             }
         });
-        jPanel1.add(square, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 200, 60, 60));
+        jPanel1.add(square, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 340, 60, 60));
 
-        factorial.setBackground(new java.awt.Color(129, 178, 154));
+        factorial.setBackground(new java.awt.Color(255, 204, 204));
         factorial.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 28)); // NOI18N
-        factorial.setForeground(new java.awt.Color(61, 64, 91));
+        factorial.setForeground(new java.awt.Color(153, 0, 51));
         factorial.setText("!");
-        factorial.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(61, 64, 91), 3, true));
+        factorial.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 0, 51), 3, true));
         factorial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 factorialActionPerformed(evt);
             }
         });
-        jPanel1.add(factorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 270, 60, 60));
+        jPanel1.add(factorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 60, 60));
 
-        show.setBackground(new java.awt.Color(129, 178, 154));
-        show.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 24)); // NOI18N
-        show.setForeground(new java.awt.Color(61, 64, 91));
-        show.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(61, 64, 91), 3, true));
-        show.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        show.addActionListener(new java.awt.event.ActionListener() {
+        toO.setBackground(new java.awt.Color(255, 215, 186));
+        toO.setFont(new java.awt.Font("Yu Gothic Light", 1, 10)); // NOI18N
+        toO.setForeground(new java.awt.Color(224, 122, 95));
+        toO.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 51, 0), 2, true));
+        toO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                showActionPerformed(evt);
+                toOActionPerformed(evt);
             }
         });
-        jPanel1.add(show, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 480, 60));
+        jPanel1.add(toO, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 20, 60, 30));
 
         toG.setBackground(new java.awt.Color(173, 208, 173));
         toG.setFont(new java.awt.Font("Yu Gothic Light", 1, 10)); // NOI18N
@@ -331,7 +343,7 @@ public class green extends javax.swing.JFrame {
                 toGActionPerformed(evt);
             }
         });
-        jPanel1.add(toG, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, 60, 30));
+        jPanel1.add(toG, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, 60, 30));
 
         toR.setBackground(new java.awt.Color(235, 167, 184));
         toR.setFont(new java.awt.Font("Yu Gothic Light", 1, 10)); // NOI18N
@@ -342,7 +354,7 @@ public class green extends javax.swing.JFrame {
                 toRActionPerformed(evt);
             }
         });
-        jPanel1.add(toR, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 20, 60, 30));
+        jPanel1.add(toR, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 20, 60, 30));
 
         toY.setBackground(new java.awt.Color(227, 214, 122));
         toY.setFont(new java.awt.Font("Yu Gothic Light", 1, 10)); // NOI18N
@@ -353,7 +365,7 @@ public class green extends javax.swing.JFrame {
                 toYActionPerformed(evt);
             }
         });
-        jPanel1.add(toY, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 20, 60, 30));
+        jPanel1.add(toY, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 20, 60, 30));
 
         toB.setBackground(new java.awt.Color(168, 208, 230));
         toB.setFont(new java.awt.Font("Yu Gothic Light", 1, 10)); // NOI18N
@@ -367,34 +379,27 @@ public class green extends javax.swing.JFrame {
         jPanel1.add(toB, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 60, 30));
 
         jLabel1.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(61, 64, 91));
+        jLabel1.setForeground(new java.awt.Color(153, 0, 51));
         jLabel1.setText("Citrice");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 20, 70, -1));
-
-        toO.setBackground(new java.awt.Color(255, 215, 186));
-        toO.setFont(new java.awt.Font("Yu Gothic Light", 1, 10)); // NOI18N
-        toO.setForeground(new java.awt.Color(224, 122, 95));
-        toO.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 51, 0), 2, true));
-        toO.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                toOActionPerformed(evt);
-            }
-        });
-        jPanel1.add(toO, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 270, 60, 60));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 410, 70, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 519, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 338, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void showActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showActionPerformed
+
+    }//GEN-LAST:event_showActionPerformed
 
     private void plusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_plusActionPerformed
         show.setText(show.getText() + "+");
@@ -481,9 +486,6 @@ public class green extends javax.swing.JFrame {
         }
         int nOne = Integer.parseInt(numOne);
         int nTwo = Integer.parseInt(numTwo);
-        System.out.println("Signo: " + sign);
-        System.out.println("Numero 1: " + numOne);
-        System.out.println("Numero 2: " + numTwo);
         calc(nOne, nTwo, sign);
     }//GEN-LAST:event_equalActionPerformed
 
@@ -503,18 +505,20 @@ public class green extends javax.swing.JFrame {
 
     }//GEN-LAST:event_factorialActionPerformed
 
-    private void showActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showActionPerformed
-
-    }//GEN-LAST:event_showActionPerformed
+    private void toOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toOActionPerformed
+        frameCld menu = new frameCld();
+        menu.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_toOActionPerformed
 
     private void toGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toGActionPerformed
-
+        green g = new green();
+        g.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_toGActionPerformed
 
     private void toRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toRActionPerformed
-        red r = new red();
-        r.setVisible(true);
-        this.setVisible(false);
+        // TODO add your handling code here:
     }//GEN-LAST:event_toRActionPerformed
 
     private void toYActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toYActionPerformed
@@ -528,12 +532,6 @@ public class green extends javax.swing.JFrame {
         b.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_toBActionPerformed
-
-    private void toOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toOActionPerformed
-        frameCld menu = new frameCld();
-        menu.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_toOActionPerformed
 
     /**
      * @param args the command line arguments
@@ -552,20 +550,20 @@ public class green extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(green.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(red.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(green.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(red.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(green.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(red.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(green.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(red.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new green().setVisible(true);
+                new red().setVisible(true);
             }
         });
     }
@@ -600,7 +598,7 @@ public class green extends javax.swing.JFrame {
     private javax.swing.JButton toR;
     private javax.swing.JButton toY;
     // End of variables declaration//GEN-END:variables
-    
+
     public void calc(int nOne, int nTwo, String sign) {
         int result = 0;
         switch (sign) {
@@ -611,13 +609,17 @@ public class green extends javax.swing.JFrame {
                 result = nOne - nTwo;
                 break;
             case "/":
-                result = nOne / nTwo;
+                if (nTwo != 0) {
+                    result = nOne / nTwo;
+                }
                 break;
             case "*":
                 result = nOne * nTwo;
                 break;
             case "^":
-                result = (int) Math.pow(nOne, nTwo);
+                if (nTwo != 0) {
+                    result = (int) Math.pow(nOne, nTwo);
+                }
                 break;
             case "√":
                 result = (int) Math.sqrt(nTwo);
@@ -626,20 +628,18 @@ public class green extends javax.swing.JFrame {
                 result = factorial(nOne);
                 break;
         }
-//        result = phrase(result);
-    show.setText(Integer.toString(result));
+        if (nTwo == 0 && ("/".equals(sign) || "^".equals(sign))) {
+            show.setText("Undefined");
+        } else {
+            show.setText(Integer.toString(result));
+        }
     }
-    
-    public int factorial(int nOne){
-        System.out.println("factorial");
-        return nOne;
-    }
-    
-//    public String phrase(int result) {
-//        swith (result) {
-//        case 1:
-//        case 2:
-//        }
-//    }
 
+    public int factorial(int nOne) {
+        if (nOne <= 1) {
+            return 1;
+        } else {
+            return nOne * factorial(nOne);
+        }
+    }
 }
